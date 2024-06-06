@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string str;
+    cout<<"enter a string";
+    cin>>str;
+    cout << "String Length = " <<str.length();
+    return 0;
+}

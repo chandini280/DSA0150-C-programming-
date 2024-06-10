@@ -1,0 +1,32 @@
+#include <iostream>
+
+class Subtractor {
+private:
+    int value;
+
+public:
+    // Constructor
+    Subtractor(int initialValue = 0) : value(initialValue) {}
+
+    // Overload the - operator
+    Subtractor operator-(const Subtractor& other) const {
+        return Subtractor(this->value - other.value);
+    }
+
+    // Getter for the value
+    int getValue() const {
+        return value;
+    }
+};
+
+int main() {
+    Subtractor s1(10);
+    Subtractor s2(5);
+
+    // Perform subtraction using overloaded - operator
+    Subtractor result = s1 - s2;
+
+    std::cout << "Result of subtraction: " << result.getValue() << std::endl;
+
+    return 0;
+}

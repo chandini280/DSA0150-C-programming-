@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+class Person {
+private:
+    std::string name;
+    int age;
+
+public:
+    // Constructor
+    Person(const std::string& name, int age) : name(name), age(age) {}
+
+    // Overload the == operator
+    bool operator==(const Person& other) const {
+        return (this->name == other.name) && (this->age == other.age);
+    }
+
+    // Getter for the name
+    std::string getName() const {
+        return name;
+    }
+
+    // Getter for the age
+    int getAge() const {
+        return age;
+    }
+};
+
+int main() {
+    Person p1("Alice", 30);
+    Person p2("Alice", 30);
+    Person p3("Bob", 25);
+
+    if (p1 == p2) {
+        std::cout << p1.getName() << " and " << p2.getName() << " are equal." << std::endl;
+    } else {
+        std::cout << p1.getName() << " and " << p2.getName() << " are not equal." << std::endl;
+    }
+
+    if (p1 == p3) {
+        std::cout << p1.getName() << " and " << p3.getName() << " are equal." << std::endl;
+    } else {
+        std::cout << p1.getName() << " and " << p3.getName() << " are not equal." << std::endl;
+    }
+
+    return 0;
+}

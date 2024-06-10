@@ -1,0 +1,33 @@
+#include <iostream>
+
+// Function to find maximum of two integers
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+// Function to find maximum of two floating-point numbers
+double max(double a, double b) {
+    return (a > b) ? a : b;
+}
+
+// Function to find maximum of two characters
+char max(char a, char b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    // Test with integers
+    int intResult = max(5, 3);
+
+    // Test with floating-point numbers
+    double doubleResult = max(5.5, 3.3);
+
+    // Test with characters
+    char charResult = max('a', 'b');
+
+    std::cout << "Maximum of two integers: " << intResult << std::endl;
+    std::cout << "Maximum of two floating-point numbers: " << doubleResult << std::endl;
+    std::cout << "Maximum of two characters: " << charResult << std::endl;
+
+    return 0;
+}

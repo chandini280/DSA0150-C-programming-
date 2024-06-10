@@ -1,0 +1,24 @@
+#include <iostream>
+
+// Function to add two integers
+int add(int a, int b) {
+    return a + b;
+}
+
+// Function to add two floating-point numbers
+double add(double a, double b) {
+    return a + b;
+}
+
+int main() {
+    // Adding two integers
+    int intResult = add(5, 3);
+
+    // Adding two floating-point numbers
+    double doubleResult = add(5.5, 3.3);
+
+    std::cout << "Sum of two integers: " << intResult << std::endl;
+    std::cout << "Sum of two floating-point numbers: " << doubleResult << std::endl;
+
+    return 0;
+}

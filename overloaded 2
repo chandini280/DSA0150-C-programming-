@@ -1,0 +1,33 @@
+#include <iostream>
+
+class Number {
+private:
+    int value;
+
+public:
+    // Constructor
+    Number(int initialValue = 0) : value(initialValue) {}
+
+    // Overload the + operator
+    Number operator+(const Number& other) const {
+        return Number(this->value + other.value);
+    }
+
+    // Getter for the value
+    int getValue() const {
+        return value;
+    }
+};
+
+int main() {
+    Number n1(10);
+    Number n2(20);
+
+    Number n3 = n1 + n2; // Use the overloaded + operator
+
+    std::cout << "Value of n1: " << n1.getValue() << std::endl;
+    std::cout << "Value of n2: " << n2.getValue() << std::endl;
+    std::cout << "Value of n3 (n1 + n2): " << n3.getValue() << std::endl;
+
+    return 0;
+}
